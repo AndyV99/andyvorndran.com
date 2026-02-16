@@ -6,8 +6,8 @@ export const domainProjects: DomainProjects = {
       {
         title: "Portfolio Site",
         description:
-          "The site you're currently on!  Made to show off my projects and development philosiphies, as well as some fun front-end tricks.",
-        stack: "React, TypeScript, Supabase",
+          "The site you're currently on!  Made to show off my projects and development philosiphies, as well as some fun front-end tricks.  Deployed to Google App Engine via Google Cloud Build",
+        stack: "React, TypeScript",
         links: [
           {
             url: "https://github.com/AndyV99/andyvorndran.com/tree/main",
