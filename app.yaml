@@ -1,2 +1,4 @@
 runtime: nodejs22
 entrypoint: node server.js
+build_env_variables:
+  GOOGLE_NODE_RUN_SCRIPTS: ""
