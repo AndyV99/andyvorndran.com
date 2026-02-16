@@ -1,0 +1,40 @@
+.site-shell {
+  margin: 0 auto;
+  width: min(1100px, 92vw);
+  padding: 2rem 0 4rem;
+}
+
+.site-content {
+  margin-top: 1rem;
+}
+
+.panel {
+  animation: rise-in 700ms ease both;
+  background: linear-gradient(
+    145deg,
+    rgba(5, 21, 30, 0.9),
+    rgba(8, 35, 42, 0.77) 55%,
+    rgba(13, 44, 52, 0.7)
+  );
+  border: 1px solid rgba(155, 223, 194, 0.22);
+  border-radius: 2rem;
+  box-shadow: 0 24px 70px rgba(2, 12, 16, 0.38);
+  padding: clamp(1.4rem, 2.8vw, 2.6rem);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 740px) {
+  .site-shell {
+    padding-top: 1rem;
+  }
+}

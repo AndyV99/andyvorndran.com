@@ -1,0 +1,5 @@
+.demo-noise {
+  background: radial-gradient(circle at 24% 19%, rgba(152, 243, 194, 0.2), transparent 46%),
+    radial-gradient(circle at 77% 85%, rgba(72, 174, 224, 0.22), transparent 42%),
+    rgba(3, 21, 27, 0.9);
+}

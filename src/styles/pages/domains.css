@@ -1,0 +1,77 @@
+.select-label {
+  color: #d4f4e5;
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-top: 1.3rem;
+}
+
+.domain-select {
+  background: rgba(5, 28, 33, 0.8);
+  border: 1px solid rgba(152, 211, 183, 0.35);
+  border-radius: 0.75rem;
+  color: #e7fff5;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.7rem 0.8rem;
+  width: min(380px, 100%);
+}
+
+.domain-note {
+  background: rgba(220, 174, 71, 0.12);
+  border: 1px solid rgba(243, 198, 95, 0.45);
+  border-radius: 0.75rem;
+  color: #ffe7b5;
+  margin: 1rem 0 0;
+  padding: 0.8rem 0.9rem;
+}
+
+.domain-note strong {
+  color: #ffd78a;
+}
+
+.project-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.project-card {
+  border: 1px solid rgba(146, 211, 184, 0.22);
+  border-radius: 1rem;
+  min-height: 140px;
+  padding: 1rem;
+}
+
+.project-card-header {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+.project-card-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-card h2 {
+  color: #eefcf7;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.project-card p {
+  color: #b2c8be;
+  line-height: 1.5;
+  margin: 0.55rem 0 0;
+}
+
+.project-stack {
+  color: #90d7b6;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

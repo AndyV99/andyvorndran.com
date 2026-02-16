@@ -1,0 +1,30 @@
+.demo-scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(147, 232, 195, 0.09),
+    rgba(5, 24, 30, 0.95) 40%,
+    rgba(6, 25, 34, 0.95) 60%,
+    rgba(147, 232, 195, 0.09)
+  );
+}
+
+.demo-scanline::before {
+  animation: sweep 2.4s linear infinite;
+  background: linear-gradient(to right, transparent, rgba(143, 250, 206, 0.5), transparent);
+  content: '';
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+.demo-scanline .demo-card-header,
+.demo-scanline p {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes sweep {
+  to {
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,55 @@
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  border-radius: 0.8rem;
+  font-weight: 700;
+  padding: 0.7rem 1.1rem;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: #9ae6c0;
+  color: #052417;
+}
+
+.button-muted {
+  background: rgba(111, 194, 158, 0.18);
+  color: #dff8ed;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.4rem 0 0;
+}
+
+.feature-card {
+  border: 1px solid rgba(146, 211, 184, 0.22);
+  border-radius: 1rem;
+  min-height: 140px;
+  padding: 1rem;
+}
+
+.feature-card h2 {
+  color: #eefcf7;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.feature-card p {
+  color: #b2c8be;
+  line-height: 1.5;
+  margin: 0.55rem 0 0;
+}

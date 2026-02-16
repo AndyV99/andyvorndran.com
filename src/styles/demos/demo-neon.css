@@ -1,0 +1,27 @@
+.demo-neon::before {
+  animation: spin-border 5s linear infinite;
+  background: conic-gradient(from 45deg, transparent 35%, #95f4c8, #67d7ee, #95f4c8);
+  content: '';
+  inset: -180%;
+  position: absolute;
+}
+
+.demo-neon::after {
+  background: #06242e;
+  border-radius: 0.85rem;
+  content: '';
+  inset: 1px;
+  position: absolute;
+}
+
+.demo-neon .demo-card-header,
+.demo-neon p {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spin-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
