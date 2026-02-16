@@ -10,7 +10,7 @@ export const domainProjects: DomainProjects = {
         stack: "React, TypeScript, Supabase",
         links: [
           {
-            url: "https://github.com/andyv/budget-dashboard",
+            url: "https://github.com/AndyV99/andyvorndran.com/tree/main",
             icon: "github",
           },
           {
@@ -52,6 +52,22 @@ export const domainProjects: DomainProjects = {
           },
           {
             url: "https://github.com/ppVon/ucp-config-helper",
+            icon: "github",
+          },
+        ],
+      },
+      {
+        title: "Cobblemon Academy Dex",
+        description:
+          "Small site to browse data scraped and organized from a minecraft modpack including stats, spawns, item drops, and more. Deployed to Cloudflare Pages via Github Actions",
+        stack: "HTML, CSS, JS",
+        links: [
+          {
+            url: "https://cobblemon-academy-dex-2.pages.dev/",
+            icon: "external",
+          },
+          {
+            url: "https://github.com/ppVon/cobblemon-academy-dex-site",
             icon: "github",
           },
         ],

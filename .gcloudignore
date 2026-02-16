@@ -1,0 +1,10 @@
+.gcloudignore
+.git
+.gitignore
+.idea
+.vscode
+node_modules/
+src/
+public/
+*.log
+*.local
