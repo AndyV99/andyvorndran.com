@@ -25,6 +25,22 @@ export const domainProjects: DomainProjects = {
     note: "These projects are published under the alias 'ppVon' to keep my anonymity in this space.",
     projects: [
       {
+        title: "Cobblemon Schema Tools (VSCode)",
+        description:
+          "A VSCode extention to help generate files and validate JSON for Cobblemon Addon creation.",
+        stack: "Typescript",
+        links: [
+          {
+            url: "https://marketplace.visualstudio.com/items?itemName=ppVon.cobblemon-schema-tools",
+            icon: "external",
+          },
+          {
+            url: "https://github.com/ppVon/cobblemon-addon-vscode",
+            icon: "github",
+          },
+        ],
+      },
+      {
         title: "Ultimate Cobblemon Progression",
         description:
           "An addon mod for Cobblemon that adds a progression system that limits level caps and spawns depending on game progression.  This project is published to multiple platforms via Github Actions.",
