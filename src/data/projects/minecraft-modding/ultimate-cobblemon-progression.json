@@ -1,0 +1,46 @@
+{
+  "id": "ultimate-cobblemon-progression",
+  "order": 2,
+  "title": "Ultimate Cobblemon Progression",
+  "description": "An addon mod for Cobblemon that adds a progression system that limits level caps and spawns depending on game progression.  This project is published to multiple platforms via Github Actions.",
+  "stack": "Java, Fabric, Neoforge, Architectury",
+  "links": [
+    {
+      "url": "https://modrinth.com/mod/ultimate-cobblemon-progression",
+      "icon": "external"
+    },
+    {
+      "url": "https://github.com/ppvon/ultimate-cobblemon-progression",
+      "icon": "github"
+    }
+  ],
+  "downloads": {
+    "noun": "download",
+    "stat": {
+      "noun": "download",
+      "total": 6976,
+      "sources": [
+        {
+          "label": "CurseForge",
+          "count": 4835
+        },
+        {
+          "label": "Modrinth",
+          "count": 2141
+        }
+      ]
+    },
+    "sources": [
+      {
+        "provider": "cfwidget",
+        "label": "CurseForge",
+        "projectId": 1359774
+      },
+      {
+        "provider": "modrinth",
+        "label": "Modrinth",
+        "projectSlug": "ultimate-cobblemon-progression"
+      }
+    ]
+  }
+}

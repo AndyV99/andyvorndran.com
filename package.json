@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:refresh-project-downloads": "node scripts/refresh-project-download-stats.mjs",
+    "refresh:project-downloads": "node scripts/refresh-project-download-stats.mjs",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "lint": "eslint .",
     "preview": "vite preview"

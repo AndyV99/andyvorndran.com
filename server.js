@@ -32,6 +32,7 @@ function sendFile(res, filePath) {
 
 createServer((req, res) => {
   const requestPath = (req.url || "/").split("?")[0];
+
   const normalizedPath = normalize(decodeURIComponent(requestPath)).replace(/^(\.\.[/\\])+/, "");
   let filePath = join(DIST_DIR, normalizedPath === "/" ? "index.html" : normalizedPath);
 

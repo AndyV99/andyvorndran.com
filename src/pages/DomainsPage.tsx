@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { domainNames, domainProjects } from "../data/projects";
+import {
+  fallbackProjectDownloadStats,
+  loadProjectDownloadStats,
+} from "../data/projectDownloadStats";
 import ProjectCard from "../components/ProjectCard";
+import type { Project, ProjectDownloadStatsMap } from "../types/content";
 
 type DomainName = (typeof domainNames)[number];
 
@@ -8,8 +13,41 @@ function DomainsPage() {
   const initialDomain: DomainName = domainNames[0] ?? "Minecraft Modding";
   const [selectedDomain, setSelectedDomain] =
     useState<DomainName>(initialDomain);
+  const [downloadStats, setDownloadStats] =
+    useState<ProjectDownloadStatsMap>(fallbackProjectDownloadStats);
+
+  useEffect(() => {
+    let isActive = true;
+
+    async function loadDownloadStats() {
+      try {
+        const payload = await loadProjectDownloadStats();
+
+        if (isActive) {
+          startTransition(() => {
+            setDownloadStats(payload);
+          });
+        }
+      } catch (error) {
+        console.error(
+          "[project-downloads] Failed to load project stats at page load",
+          error,
+        );
+      }
+    }
+
+    void loadDownloadStats();
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
+
   const domainEntry = domainProjects[selectedDomain];
-  const projects = domainEntry?.projects ?? [];
+  const projects: Project[] = (domainEntry?.projects ?? []).map((project) => ({
+    ...project,
+    downloadStat: downloadStats[project.id] ?? project.downloads?.stat,
+  }));
   const note = domainEntry?.note;
 
   return (
@@ -40,7 +78,7 @@ function DomainsPage() {
       )}
       <ul className="project-list">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </ul>
     </section>

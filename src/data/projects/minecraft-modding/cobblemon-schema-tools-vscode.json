@@ -1,0 +1,37 @@
+{
+  "id": "cobblemon-schema-tools-vscode",
+  "order": 1,
+  "title": "Cobblemon Schema Tools (VSCode)",
+  "description": "A VSCode extention to help generate files and validate JSON for Cobblemon Addon creation.",
+  "stack": "Typescript",
+  "links": [
+    {
+      "url": "https://marketplace.visualstudio.com/items?itemName=ppVon.cobblemon-schema-tools",
+      "icon": "external"
+    },
+    {
+      "url": "https://github.com/ppVon/cobblemon-addon-vscode",
+      "icon": "github"
+    }
+  ],
+  "downloads": {
+    "noun": "install",
+    "stat": {
+      "noun": "install",
+      "total": 44,
+      "sources": [
+        {
+          "label": "VS Code Marketplace",
+          "count": 44
+        }
+      ]
+    },
+    "sources": [
+      {
+        "provider": "vscode-marketplace",
+        "label": "VS Code Marketplace",
+        "itemName": "ppVon.cobblemon-schema-tools"
+      }
+    ]
+  }
+}

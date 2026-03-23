@@ -1,0 +1,17 @@
+{
+  "id": "ultimate-cobblemon-progression-config-helper",
+  "order": 3,
+  "title": "Ultimate Cobblemon Progression Config Helper",
+  "description": "A website to help configure the mod listed above and its level curves and weight scaling for Cobblemon spawns.  Built and published to Cloudflare Pages via Github Actions",
+  "stack": "React, Typescript",
+  "links": [
+    {
+      "url": "https://ucp-config-helper.pages.dev/",
+      "icon": "external"
+    },
+    {
+      "url": "https://github.com/ppVon/ucp-config-helper",
+      "icon": "github"
+    }
+  ]
+}

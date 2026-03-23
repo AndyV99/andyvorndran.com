@@ -5,6 +5,10 @@ steps:
 
   - name: "node:22"
     entrypoint: "npm"
+    args: ["run", "build:refresh-project-downloads"]
+
+  - name: "node:22"
+    entrypoint: "npm"
     args: ["run", "build"]
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"

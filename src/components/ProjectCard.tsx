@@ -1,15 +1,21 @@
 import IconLink from './IconLink'
-import type { Project, ProjectLink } from '../types/content'
+import type { Project, ProjectDownloadNoun, ProjectLink } from '../types/content'
 
 type ProjectCardProps = {
   project: Project
 }
+
+const numberFormatter = new Intl.NumberFormat('en-US')
+
+const formatDownloadCount = (count: number, noun: ProjectDownloadNoun) =>
+  `${numberFormatter.format(count)} ${count === 1 ? noun : `${noun}s`}`
 
 function ProjectCard({ project }: ProjectCardProps) {
   const linkLabelByIcon: Record<ProjectLink['icon'], string> = {
     github: `Open GitHub for ${project.title}`,
     external: `Open external site for ${project.title}`,
   }
+  const downloadStat = project.downloadStat
 
   return (
     <li className="project-card">
@@ -27,6 +33,13 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
       <p>{project.description}</p>
+      {downloadStat ? (
+        <div className="project-downloads">
+          <p className="project-download-total">
+            {formatDownloadCount(downloadStat.total, downloadStat.noun)}
+          </p>
+        </div>
+      ) : null}
       <p className="project-stack">{project.stack}</p>
     </li>
   )
