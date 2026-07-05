@@ -1,10 +1,36 @@
 :root {
-  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --paper: #f6f5f0;
+  --ink: #14140f;
+  --rule: #14140f;
+  --rule-soft: rgba(20, 20, 15, 0.16);
+  --accent: #d7263d;
+  --accent-ink: #f6f5f0;
+  --muted: #6e6d64;
+  --chip-bg: rgba(20, 20, 15, 0.06);
+
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+
+  font-family: var(--font-body);
   font-synthesis: none;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121210;
+    --ink: #f3f1e7;
+    --rule: #f3f1e7;
+    --rule-soft: rgba(243, 241, 231, 0.18);
+    --accent: #ff5b45;
+    --accent-ink: #121210;
+    --muted: #9e9c8f;
+    --chip-bg: rgba(243, 241, 231, 0.08);
+  }
 }
 
 *,
@@ -13,9 +39,18 @@
   box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
-  background: radial-gradient(circle at 8% 10%, #17334a 0%, #071720 38%, #031016 100%);
-  color: #f2fff9;
+  background: var(--paper);
+  color: var(--ink);
   margin: 0;
   min-height: 100vh;
   min-width: 320px;
@@ -24,4 +59,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

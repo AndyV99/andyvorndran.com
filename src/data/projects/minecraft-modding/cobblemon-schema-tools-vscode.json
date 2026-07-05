@@ -7,11 +7,13 @@
   "links": [
     {
       "url": "https://marketplace.visualstudio.com/items?itemName=ppVon.cobblemon-schema-tools",
-      "icon": "external"
+      "icon": "external",
+      "label": "Marketplace"
     },
     {
       "url": "https://github.com/ppVon/cobblemon-addon-vscode",
-      "icon": "github"
+      "icon": "github",
+      "label": "GitHub"
     }
   ],
   "downloads": {

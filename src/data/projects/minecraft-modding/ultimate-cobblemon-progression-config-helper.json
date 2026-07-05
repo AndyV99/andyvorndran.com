@@ -7,11 +7,13 @@
   "links": [
     {
       "url": "https://ucp-config-helper.pages.dev/",
-      "icon": "external"
+      "icon": "external",
+      "label": "Live"
     },
     {
       "url": "https://github.com/ppVon/ucp-config-helper",
-      "icon": "github"
+      "icon": "github",
+      "label": "GitHub"
     }
   ]
 }

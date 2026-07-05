@@ -3,6 +3,7 @@ export type LinkIcon = 'github' | 'external'
 export type ProjectLink = {
   url: string
   icon: LinkIcon
+  label?: string
 }
 
 export type ProjectDownloadNoun = 'download' | 'install'

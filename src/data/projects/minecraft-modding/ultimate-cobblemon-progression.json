@@ -7,11 +7,13 @@
   "links": [
     {
       "url": "https://modrinth.com/mod/ultimate-cobblemon-progression",
-      "icon": "external"
+      "icon": "external",
+      "label": "Modrinth"
     },
     {
       "url": "https://github.com/ppvon/ultimate-cobblemon-progression",
-      "icon": "github"
+      "icon": "github",
+      "label": "GitHub"
     }
   ],
   "downloads": {

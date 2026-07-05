@@ -1,37 +1,54 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-type NavLinkItem = {
-  to: "/" | "/css-lab" | "/projects";
-  label: string;
-};
+function useClock() {
+  const [now, setNow] = useState(() => new Date());
 
-const links: NavLinkItem[] = [
-  { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
-  { to: "/css-lab", label: "CSS Lab" },
-];
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return now;
+}
+
+function formatGmtOffset(date: Date) {
+  const offsetHours = -date.getTimezoneOffset() / 60;
+  const sign = offsetHours >= 0 ? "+" : "-";
+  return `GMT${sign}${Math.abs(offsetHours)}`;
+}
 
 function Navbar() {
+  const now = useClock();
+  const time = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
   return (
     <header className="top-nav">
       <p className="brand">Andy Vorndran</p>
-      <nav aria-label="Main navigation">
-        <ul className="nav-links">
-          {links.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                end={link.to === "/"}
-                className={({ isActive }) =>
-                  `nav-link${isActive ? " nav-link-active" : ""}`
-                }
-              >
-                {link.label}
-              </NavLink>
+      <div className="nav-right">
+        <nav aria-label="Main navigation">
+          <ul className="nav-links">
+            <li>
+              <a className="nav-link" href="#index">
+                Index
+              </a>
             </li>
-          ))}
-        </ul>
-      </nav>
+            <li>
+              <a className="nav-link" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <p className="nav-clock" aria-hidden="true">
+          <span className="nav-clock-dot" />
+          {time} / {formatGmtOffset(now)}
+        </p>
+      </div>
     </header>
   );
 }
