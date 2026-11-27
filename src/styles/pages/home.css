@@ -1,29 +1,9 @@
-/* ---------- shared text ---------- */
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 1.1rem;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-}
-
 /* ---------- hero ---------- */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: clamp(1.5rem, 4vw, 3.2rem);
-  padding: clamp(2.4rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.2rem);
+  padding: 40px 0;
   border-bottom: 2px solid var(--rule);
 }
 

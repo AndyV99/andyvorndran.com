@@ -6,7 +6,6 @@ function HomePage() {
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">Full-stack developer</p>
           <h1 className="hero-title">
             Ships end-to-end
             <br />
@@ -52,7 +51,7 @@ function HomePage() {
 
       <section className="capabilities">
         <div className="capability">
-          <p className="tag">01 — Build</p>
+          <p className="tag">Build</p>
           <h3>Full-stack delivery</h3>
           <p>
             TypeScript UI across several frameworks, Node/NestJS APIs, and
@@ -60,7 +59,7 @@ function HomePage() {
           </p>
         </div>
         <div className="capability">
-          <p className="tag">02 — Refine</p>
+          <p className="tag">Refine</p>
           <h3>Systems &amp; performance</h3>
           <p>
             Reusable components and Core Web Vitals-conscious UI — interfaces
@@ -68,7 +67,7 @@ function HomePage() {
           </p>
         </div>
         <div className="capability">
-          <p className="tag">03 — Operate</p>
+          <p className="tag">Operate</p>
           <h3>CI/CD &amp; observability</h3>
           <p>
             Pipelines that test, build, and deploy automatically, with logs
