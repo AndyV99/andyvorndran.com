@@ -48,14 +48,12 @@ function ProjectIndex() {
     };
   }, []);
 
-  let runningIndex = 0;
-
   return (
     <section className="index-section" id="index">
       <div className="index-head">
         <h2>Index — shipped work</h2>
         <p className="index-count">
-          {String(allProjects.length).padStart(3, "0")} entries
+          {allProjects.length} entries
         </p>
       </div>
 
@@ -76,9 +74,6 @@ function ProjectIndex() {
             )}
             <div className="manifest">
               {projects.map((project) => {
-                runningIndex += 1;
-                const index = String(runningIndex).padStart(3, "0");
-
                 return (
                   <article
                     className={`manifest-row${
@@ -86,7 +81,6 @@ function ProjectIndex() {
                     }`}
                     key={project.id}
                   >
-                    <span className="m-index">{index}</span>
                     <div className="m-title-wrap">
                       <h3 className="m-title">{project.title}</h3>
                       <p className="m-desc">{project.description}</p>

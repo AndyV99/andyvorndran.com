@@ -244,7 +244,7 @@
 
 .manifest-row {
   display: grid;
-  grid-template-columns: 2.6rem minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 1.2rem;
   align-items: baseline;
   padding: 0.95rem 0;
@@ -258,13 +258,6 @@
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   background: var(--chip-bg);
-}
-
-.m-index {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  color: var(--muted);
-  font-size: 0.85rem;
 }
 
 .m-title-wrap {
@@ -415,13 +408,13 @@
   }
 
   .manifest-row {
-    grid-template-columns: 2rem minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     min-width: 0;
   }
 
   .m-stack,
   .m-links {
-    grid-column: 2 / 3;
+    grid-column: 1;
     justify-content: flex-start;
     max-width: none;
   }
